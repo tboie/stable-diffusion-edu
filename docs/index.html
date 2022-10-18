@@ -21,13 +21,13 @@
       }
 
       h3 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
 
       section {
         border-top: 1px solid black;
         padding: 1.5rem 0 3rem;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
 
       a {
@@ -36,18 +36,24 @@
       }
 
       ul {
-        max-width: 500px;
+        max-width: 600px;
         margin: auto;
+        padding-bottom: 1rem;
         font-size: 1.3rem;
         text-align: left;
       }
 
-      ul li,
+      li {
+        padding: 0.25rem 0;
+      }
+
       img {
-        margin: 0.35rem 0 0.6rem;
+        margin: 0.25rem 0 1.25rem;
       }
 
       span {
+        display: inline-block;
+        margin-top: 0.25rem;
         padding: 0 0.2rem;
         background-color: black;
         color: lightgreen;
@@ -77,22 +83,18 @@
     <section>
       <h2>#2</h2>
       <ul>
-        <li>
-          Click Settings Icon in top right corner
-          <img src="docker-settings-icon.png" />
-        </li>
-        <li>
-          Click left menu "Resources" and change Memory to 12 GB
-          <img src="docker-resources.png" />
-        </li>
-        <li>
-          Click "Apply and Restart" button
-          <img src="docker-settings-restart.png" />
-        </li>
-        <li>
-          When finished, close Settings from top right "X" button
-          <img src="settings-close.png" />
-        </li>
+        <li>Click Settings Icon in top right corner</li>
+        <img src="images/docker-settings-icon.png" />
+
+        <li>Click left menu "Resources" and change Memory to 12 GB</li>
+        <img src="images/docker-resources.png" />
+
+        <li>Click "Apply and Restart" button</li>
+        <img src="images/docker-settings-restart.png" />
+
+        <li>When finished, close Settings from top right "X" button</li>
+        <img src="images/settings-close.png" />
+
         <br />
         <li>Minimize Docker Desktop</li>
       </ul>
@@ -112,7 +114,7 @@
         <li>Open Finder, go to Downloads</li>
         <li>Right-click Folder "stable-diffusion-webui-docker-master"</li>
         <li>Click "New Terminal at Folder"</li>
-        <img src="open-terminal.png" />
+        <img src="images/open-terminal.png" />
       </ul>
     </section>
 
@@ -132,13 +134,14 @@
         </li>
         <br />
         <li>
-          If you DO have NVIDIA GPU, enter command:
+          Else if you DO have NVIDIA GPU, enter command:
           <br />
           <span>docker compose --profile auto up --build</span>
         </li>
         <br />
+        <br />
         <li>Wait for below text (probably several minutes)</li>
-        <img src="web-ready.png" />
+        <img src="images/web-ready.png" />
       </ul>
     </section>
 
@@ -150,9 +153,12 @@
           <a href="http://localhost:7860/" target="_blank"
             >http://localhost:7860/</a
           >
-          <img src="web-ui.png" />
         </li>
-        <li>Congratulations!</li>
+        <li>Select Checkpoint</li>
+        <li>Enter Prompt text</li>
+        <li>Click Generate button</li>
+        <li>Wait for image to appear (may take several minutes)</li>
+        <img src="images/sd-example.png" />
       </ul>
     </section>
 
@@ -163,15 +169,12 @@
         <li>To start and stop Stable Diffusion...</li>
         <li>Open Docker Desktop</li>
         <li>Click expand icon next to "webui-docker"</li>
-        <li>
-          Click name "auto-cpu-1"
-          <img src="docker-container-list.png" />
-        </li>
+        <li>Click name "auto-cpu-1"</li>
+        <img src="images/docker-container-list.png" />
+
         <li>Click top right Start/Stop button</li>
-        <li>
-          URL ready when text visible
-          <img src="docker-console.png" />
-        </li>
+        <li>URL ready when text visible</li>
+        <img src="images/docker-console.png" />
       </ul>
     </section>
 
