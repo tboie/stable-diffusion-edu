@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stable Diffusion: Educational Edition</title>
+    <meta name="description" content="Stable Diffusion Educational Edition" />
+    <meta
+      name="keywords"
+      content="stable diffusion mac osx macintosh intel processor"
+    />
+    <style>
+      body {
+        text-align: center;
+        font-size: 16px;
+        background-color: lightgray;
+        padding-bottom: 2rem;
+      }
+
+      h2 {
+        margin-top: 0;
+        font-size: 1.6rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      section {
+        border-top: 1px solid black;
+        padding: 1.5rem 0 3rem;
+        font-size: 1.5rem;
+      }
+
+      a {
+        font-size: 1.4rem;
+        display: inline-block;
+      }
+
+      ul {
+        max-width: 500px;
+        margin: auto;
+        font-size: 1.3rem;
+        text-align: left;
+      }
+
+      ul li,
+      img {
+        margin: 0.35rem 0 0.6rem;
+      }
+
+      span {
+        padding: 0 0.2rem;
+        background-color: black;
+        color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Stable Diffusion: Educational Edition</h1>
+      <h2>Mac, Windows, Linux</h2>
+    </section>
+
+    <section>
+      <h2>#1</h2>
+      <ul>
+        <li>
+          <a target="_blank" href="https://www.docker.com/"
+            >Download Docker Desktop (click blue button)</a
+          >
+        </li>
+        <li>Install Docker Desktop</li>
+        <li>Open Docker Desktop</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>#2</h2>
+      <ul>
+        <li>
+          Click Settings Icon in top right corner
+          <img src="docker-settings-icon.png" />
+        </li>
+        <li>
+          Click left menu "Resources" and change Memory to 12 GB
+          <img src="docker-resources.png" />
+        </li>
+        <li>
+          Click "Apply and Restart" button
+          <img src="docker-settings-restart.png" />
+        </li>
+        <li>
+          When finished, close Settings from top right "X" button
+          <img src="settings-close.png" />
+        </li>
+        <br />
+        <li>Minimize Docker Desktop</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>#3</h2>
+      <a
+        href="https://github.com/AbdBarho/stable-diffusion-webui-docker/archive/refs/heads/master.zip"
+        >Download Stable Diffusion and Unzip (click downloaded file)</a
+      >
+    </section>
+
+    <section>
+      <h2>#4</h2>
+      <ul>
+        <li>Open Finder, go to Downloads</li>
+        <li>Right-click Folder "stable-diffusion-webui-docker-master"</li>
+        <li>Click "New Terminal at Folder"</li>
+        <img src="open-terminal.png" />
+      </ul>
+    </section>
+
+    <section>
+      <h2>#5</h2>
+      <ul>
+        <li>
+          Enter command:<br />
+          <span>docker compose --profile download up --build</span>
+        </li>
+        <li>Wait for finish (probably several minutes)</li>
+        <br />
+        <li>
+          If you DON'T have NVIDIA GPU or DON'T know, enter command:
+          <br />
+          <span>docker compose --profile auto-cpu up --build</span>
+        </li>
+        <br />
+        <li>
+          If you DO have NVIDIA GPU, enter command:
+          <br />
+          <span>docker compose --profile auto up --build</span>
+        </li>
+        <br />
+        <li>Wait for below text (probably several minutes)</li>
+        <img src="web-ready.png" />
+      </ul>
+    </section>
+
+    <section>
+      <h2>#6</h2>
+      <ul>
+        <li>
+          Open browser URL:
+          <a href="http://localhost:7860/" target="_blank"
+            >http://localhost:7860/</a
+          >
+          <img src="web-ui.png" />
+        </li>
+        <li>Congratulations!</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>#7</h2>
+      <h3>After Successfull Install</h3>
+      <ul>
+        <li>To start and stop Stable Diffusion...</li>
+        <li>Open Docker Desktop</li>
+        <li>Click expand icon next to "webui-docker"</li>
+        <li>
+          Click name "auto-cpu-1"
+          <img src="docker-container-list.png" />
+        </li>
+        <li>Click top right Start/Stop button</li>
+        <li>
+          URL ready when text visible
+          <img src="docker-console.png" />
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>#8</h2>
+      <h3>Increase Performance</h3>
+      <ul>
+        <li>Add more CPU/RAM in step #2</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <a href="https://twitter.com/tmboie" target="_blank"
+        >https://twitter.com/tmboie</a
+      >
+    </section>
+
+    <br />
+    <br />
+    <br />
+  </body>
+</html>
